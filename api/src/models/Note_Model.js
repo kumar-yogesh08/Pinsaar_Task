@@ -11,7 +11,7 @@ const NoteSchema = new mongoose.Schema({
     title:String,
     body:String,
     releaseAt:{type:Date,index:true},
-    webhookurl:String,
+    webhookUrl:String,
     status:{
         type:String,
         enum:["pending","delivered","failed","dead"],
