@@ -33,13 +33,13 @@ router.post('/',async(req,res)=>{
 });
 router.get('/',async(req,res)=>{
     try{
-        const page = Math.max(1,parseInt(req.query.page || '1')),
+        const page = Math.max(1,parseInt(req.query.page || '1'))
         const limit = 20
-        const filter={status:null}
+        const filter={}
         if (req.query.status){
             filter.status=req.query.status
         } 
-        const [items,total]= await Promise.all([Note.find(filter).sort({createdAt:-1}).skip((page-1)*limit).limit(limit).lean(),Note.countDocuments(filter)])
+        const [items,total]= await Promise.all([Note.find(filter).sort({createdAt:-1}).skip((page-1)*limit).limit(limit).lean(),Note.countDocuments(filter)]) //20 per page
         
         const map= items.map(n=>({
             id:n._id,
@@ -50,10 +50,12 @@ router.get('/',async(req,res)=>{
             releaseAt:n.releaseAt,
             webhookUrl:n.webhookUrl
         }))
-        res.json({items:mapped,page,total,totalPages:Math.ceil(total/limit)})
+        res.status(200).json({items:mapped,page,total,totalPages:Math.ceil(total/limit)})
     }
     catch(e){
         req.log?.error(e)
         res.status(500).json({erroe:"Internal error"})
     }
+
 })
+// To be completed
