@@ -50,7 +50,7 @@ router.get('/',async(req,res)=>{
             releaseAt:n.releaseAt,
             webhookUrl:n.webhookUrl
         }))
-        res.status(200).json({items:mapped,page,total,totalPages:Math.ceil(total/limit)})
+        res.status(200).json({items:map,page,total,totalPages:Math.ceil(total/limit)})
     }
     catch(e){
         req.log?.error(e)
