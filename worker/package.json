@@ -1,0 +1,19 @@
+{
+  "name": "worker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bullmq": "^5.61.2",
+    "dayjs": "^1.11.18",
+    "ioredis": "^5.8.2",
+    "mongoose": "^8.19.2",
+    "pino": "^10.1.0"
+  }
+}
