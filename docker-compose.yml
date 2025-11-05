@@ -13,9 +13,11 @@ services:
     ports: ["6379:6379"] 
   
   api:
-    build: ./api
+    build:
+      context: .
+      dockerfile: api/Dockerfile
     env_file: ./.env
-    port: ["3000:3000"]
+    ports: ["3000:3000"]
     depends_on: [mongo,redis]
     restart: always
   
@@ -28,9 +30,9 @@ services:
   sink:
     build: ./sink
     env_file: ./.env
-    port: ["4000:4000"]
+    ports: ["4000:4000"]
     depends_on: [redis]
     restart: always
   
-  volumes:
+volumes:
     mongo-data:

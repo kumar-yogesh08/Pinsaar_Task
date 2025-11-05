@@ -12,7 +12,7 @@ import { info } from "console";
 const __fileName = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__fileName);
 const app = express();
-const logger = pino({ level: info });
+const logger = pino({ level: "info" });
 app.use(pinoHttp({ logger }));
 app.use(express.json());
 

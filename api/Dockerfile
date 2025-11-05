@@ -22,11 +22,11 @@ FROM base AS api
 
 WORKDIR /app/api
 
-COPY package.json package-lock.json ./
+COPY ./api/package.json ./api/package-lock.json ./
 
 RUN npm ci
 
-COPY src ./src
+COPY ./api/src ./src
 
 # copy built admin to pulic/ served by Express
 

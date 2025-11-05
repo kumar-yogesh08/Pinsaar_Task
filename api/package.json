@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "backend",
   "main": "index.js",
-  "type": "module", 
+  "type": "module",
   "scripts": {
-     "dev": "node src/server.js",
+    "dev": "node src/server.js",
     "start": "node src/server.js",
     "lint": "echo \"(add eslint if you like)\""
   },
-   "dependencies": {
+  "dependencies": {
     "dayjs": "^1.11.11",
+    "dotenv": "^17.2.3",
     "express": "^4.19.2",
     "express-rate-limit": "^7.0.0",
     "mongoose": "^8.5.1",
@@ -19,5 +20,5 @@
     "zod": "^3.23.8"
   },
   "author": "kumar yogesh",
-  "license": "ISC" 
+  "license": "ISC"
 }

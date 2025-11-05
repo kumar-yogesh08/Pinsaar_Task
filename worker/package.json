@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node src/worker.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +13,7 @@
   "dependencies": {
     "bullmq": "^5.61.2",
     "dayjs": "^1.11.18",
+    "dotenv": "^17.2.3",
     "ioredis": "^5.8.2",
     "mongoose": "^8.19.2",
     "pino": "^10.1.0"

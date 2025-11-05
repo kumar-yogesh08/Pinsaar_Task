@@ -5,7 +5,7 @@ export async function api(path, { method='GET', body } = {}) {
     method,
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${import.meta.env.VITE_ADMIN_TOKEN || 'changeme'}`
+      'Authorization': `Bearer ${import.meta.env.VITE_ADMIN_TOKEN || 'aPIPOLC9YLODA637DEJF'}`
     },
     body: body ? JSON.stringify(body) : undefined
   });

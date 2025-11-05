@@ -1,0 +1,23 @@
+# Ignore dependencies & build caches
+node_modules
+npm-debug.log
+pnpm-lock.yaml
+yarn.lock
+
+# Ignore local env files (they'll come from docker-compose env_file)
+# .env
+# .env.local
+
+# Ignore build outputs
+dist
+build
+
+# Ignore Git & editor stuff
+.git
+.gitignore
+.vscode
+.DS_Store
+
+# Ignore any OS temp files
+*.swp
+*.tmp

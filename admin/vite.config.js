@@ -5,7 +5,7 @@ import {resolve} from 'path'
 export default defineConfig({
   plugins: [react()],
   build:{
-    outDir:'../api/public',
+    outDir:'dist',
     emptyOutDir:true
   },
   resolve:{
